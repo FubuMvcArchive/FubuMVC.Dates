@@ -40,6 +40,7 @@ namespace FubuMVC.Dates.Testing
             {
                 x.SetServiceIfNone<ITimeZoneContext>(theTimeZoneContext);
             });
+            registry.Import<FubuMVC.Core.UI.FubuHtmlRegistration>();
             registry.Import<DateTimePolicies>(action);
 
             FubuApplication.For(registry).StructureMap(container).Bootstrap();

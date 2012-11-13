@@ -11,7 +11,7 @@ namespace FubuMVC.Dates
     public class DateTimePolicies : IFubuRegistryExtension
     {
         private readonly DateTimeFormattingRules _formattingRules = new DateTimeFormattingRules();
-        private Action<IServiceRegistry> _timeZoneRegistration = s => { };
+        private Action<ServiceRegistry> _timeZoneRegistration = s => { };
 
         public string DefaultDateTimeFormat
         {

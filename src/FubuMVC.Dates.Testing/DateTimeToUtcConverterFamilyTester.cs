@@ -3,6 +3,7 @@ using FubuCore.Binding.InMemory;
 using FubuCore.Dates;
 using NUnit.Framework;
 using FubuTestingSupport;
+using System.Linq;
 
 namespace FubuMVC.Dates.Testing
 {
@@ -14,7 +15,7 @@ namespace FubuMVC.Dates.Testing
         public void simple_happy_path_for_a_date()
         {
             var localTime = new DateTime(2012, 6, 27, 8, 0, 0);
-            var timeZone = TimeZoneInfo.FindSystemTimeZoneById("Central Standard Time");
+            var timeZone = TimeZoneInfo.GetSystemTimeZones().Skip(3).First();
 
             BindingScenario<DateTimeTarget>.For(x =>
             {
@@ -29,7 +30,7 @@ namespace FubuMVC.Dates.Testing
         public void simple_happy_path_for_a_date_as_a_string()
         {
             var localTime = new DateTime(2012, 6, 27, 8, 0, 0);
-            var timeZone = TimeZoneInfo.FindSystemTimeZoneById("Central Standard Time");
+            var timeZone = TimeZoneInfo.GetSystemTimeZones().Skip(3).First();
 
             BindingScenario<DateTimeTarget>.For(x =>
             {
@@ -43,7 +44,7 @@ namespace FubuMVC.Dates.Testing
         [Test]
         public void nullable_property_has_no_data_and_should_be_null()
         {
-            var timeZone = TimeZoneInfo.FindSystemTimeZoneById("Central Standard Time");
+            var timeZone = TimeZoneInfo.GetSystemTimeZones().Skip(3).First();
 
             BindingScenario<DateTimeTarget>.For(x =>
             {
@@ -57,7 +58,7 @@ namespace FubuMVC.Dates.Testing
         [Test]
         public void nullable_property_has_empty_string_in_the_request()
         {
-            var timeZone = TimeZoneInfo.FindSystemTimeZoneById("Central Standard Time");
+            var timeZone = TimeZoneInfo.GetSystemTimeZones().Skip(3).First();
 
             BindingScenario<DateTimeTarget>.For(x =>
             {
@@ -72,7 +73,7 @@ namespace FubuMVC.Dates.Testing
         public void happy_path_for_nullable_datetime()
         {
             var localTime = new DateTime(2012, 6, 27, 8, 0, 0);
-            var timeZone = TimeZoneInfo.FindSystemTimeZoneById("Central Standard Time");
+            var timeZone = TimeZoneInfo.GetSystemTimeZones().Skip(3).First();
 
             BindingScenario<DateTimeTarget>.For(x =>
             {

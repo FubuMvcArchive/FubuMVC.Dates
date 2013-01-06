@@ -8,6 +8,7 @@ using NUnit.Framework;
 using StructureMap;
 using FubuCore.Reflection;
 using FubuTestingSupport;
+using System.Linq;
 
 namespace FubuMVC.Dates.Testing
 {
@@ -25,7 +26,11 @@ namespace FubuMVC.Dates.Testing
         public void SetUp()
         {
             _formatter = null;
-            theTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Central Standard Time");
+            theTimeZone = TimeZoneInfo.GetSystemTimeZones().First();
+                
+                
+                
+                
             theTimeZoneContext = new SimpleTimeZoneContext(theTimeZone);
 
             localTime = new DateTime(2012, 6, 27, 8, 0, 0);

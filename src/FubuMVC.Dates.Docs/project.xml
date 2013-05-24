@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<ProjectRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <TagLine>DateTime model binding, TimeZone correction, and display policies for FubuMVC applications</TagLine>
+  <Name>FubuMVC.Dates</Name>
+  <GitHubPage>http://github.com/DarthFubuMVC/FubuMVC.Dates</GitHubPage>
+  <UserGroupUrl>https://groups.google.com/forum/?fromgroups#!forum/fubumvc-devel</UserGroupUrl>
+  <BuildServerUrl>http://build.fubu-project.org/project.html?projectId=project33&amp;tab=projectOverview</BuildServerUrl>
+  <BottleName>FubuMVC.Dates.Docs</BottleName>
+  <TeamCityBuildType>bt58</TeamCityBuildType>
+  <Nugets>
+    <PublishedNuget>
+      <Name>FubuMVC.Dates</Name>
+      <Description>DateTime model binding, TimeZone correction, and display policies for FubuMVC applications</Description>
+    </PublishedNuget>
+  </Nugets>
+  <Url>fubumvc.dates</Url>
+</ProjectRoot>
